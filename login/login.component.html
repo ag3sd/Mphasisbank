@@ -1,0 +1,33 @@
+<div>
+  <label>user id </label>
+  <input id="name" name="name" required minlength="4" required maxlength="15" [(ngModel)]="name" #refname="ngModel">
+
+
+  <div *ngIf="refname.invalid && (refname.touched|| refname.dirty)">
+    <div *ngIf="refname.errors.required">
+      name is required.
+    </div>
+    <div *ngIf="refname.errors.minlength">
+      Name must be at least 4 characters long.
+    </div>
+  </div>
+</div>
+
+<div>
+
+  <label>password </label>
+  <input id="password" name="password" type="password" required minlength="8" maxlength="12" [(ngModel)]="password" #refpw="ngModel">
+  <div *ngIf="refpw.invalid && (refpw.touched|| refpw.dirty)">
+  <div *ngIf="refpw.errors.required">
+    Password is required.
+  </div>
+  <div *ngIf="refpw.errors.minlength">
+    Name must be at least 8 characters long.
+  </div>
+  <div *ngIf="refpw.errors.maxlength">
+    Name must be only 12 characters long.
+  </div>
+  </div>
+  <input type="submit" value="submit">
+</div>
+
