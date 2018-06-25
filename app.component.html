@@ -1,5 +1,14 @@
-<h1>Welcome to mphasis bank </h1>
-<h3>Customer Section</h3>
-<p>For your account details, click here! </p>
-<a routerLink="customer">Customer Details</a>
-<router-outlet></router-outlet>
+<app-header></app-header>
+<div>
+        <ul class="">
+            <li routerLinkActive="active">
+                <a routerLink="login"></a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="homer"></a>
+            </li>
+        </ul>
+        
+        <router-outlet></router-outlet>
+    </div>
+<app-footer></app-footer>
