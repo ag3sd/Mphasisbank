@@ -1,40 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from'@angular/forms';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import { RouterModule,Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { CustomerComponent } from './customer/customer.component';
-import{AccountComponent} from './account/account.component';
-import{TransactionComponent} from './transaction/transaction.component';
-import{DetailsComponent} from './details/details.component';
+import { RegisterComponent } from './register/register.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
-import { ModuleWithProviders }  from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [
-  { path: 'customer', component: CustomerComponent },
-  {path: 'account' , component: AccountComponent},
-    {path: 'transaction' , component: TransactionComponent},
-    {path: 'details' , component: DetailsComponent}
-  
-]
- const routing: ModuleWithProviders = RouterModule.forRoot(routes);
-
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent }, 
+  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'register', component: RegisterComponent }, 
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CustomerComponent,
-    AccountComponent,
-    TransactionComponent,
-    DetailsComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap:[AppComponent]
 })
 export class AppModule { }
