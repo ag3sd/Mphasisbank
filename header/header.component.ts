@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterializeModule } from 'ng2-materialize';
+
 
 @Component({
   selector: 'app-header',
