@@ -1,3 +1,16 @@
+td
+{
+color:teal;
+font-style: italic;
+    font-size: 20px;
+    
+}
+#h{
+    color:teal;
+    font-style: oblique;
+    font-size: 20px;
+    text-align: center;
+}
 p{
     font-size: 50px;
     text-align: center;

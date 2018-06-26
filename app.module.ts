@@ -17,13 +17,28 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 import { AccountInfoComponent } from './account-info/account-info.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { VerifyAccountComponent } from './verify-account/verify-account.component';
+import { DeleteAccountComponent } from './delete-account/delete-account.component';
+import { AtmComponent } from './atm/atm.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'atm', component: AtmComponent },
   { path: 'home', component: HomeComponent }, 
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent }, 
+  { path: 'customer-header', component: CustomerHeaderComponent }, 
+  { path: 'customer-details', component: CustomerDetailsComponent }, 
+  { path: 'account-info', component: AccountInfoComponent }, 
+  { path: 'transaction', component: TransactionComponent }, 
+  { path: 'transaction-history', component: TransactionHistoryComponent },
+  { path: 'employee', component: EmployeeComponent },
+  { path: 'employee-details', component: EmployeeDetailsComponent },
+  { path: 'verify-account', component: VerifyAccountComponent },
+  { path: 'delete-account', component: DeleteAccountComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 @NgModule({
@@ -40,7 +55,12 @@ const appRoutes: Routes = [
     CustomerDetailsComponent,
     AccountInfoComponent,
     TransactionComponent,
-    TransactionHistoryComponent
+    TransactionHistoryComponent,
+    EmployeeComponent,
+    EmployeeDetailsComponent,
+    VerifyAccountComponent,
+    DeleteAccountComponent,
+    AtmComponent
   ],
   imports: [
     BrowserModule,
