@@ -1,5 +1,5 @@
 p{
-    font-size:50px;
+    font-size:30px;
     font-style: italic;
   }
   label{
@@ -9,8 +9,8 @@ p{
   }
   .btn
   {
-    font-size: 30px;
-    font-style: oblique;
+    font-size: 15px;
+  
     
   }
   .input-field{

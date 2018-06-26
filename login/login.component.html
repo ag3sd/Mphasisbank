@@ -1,8 +1,9 @@
-<div class="row center">
+<div class="row ">
     <form id="login" class="center col s12" #login="ngForm">
 
-  <div class="row">
-    <div class="input-field col s3">
+  <div class="row order ">
+    <div class="col s1 m4"></div>
+    <div class="input-field col s7 offset-s1 m4">
       <i class="small material-icons prefix">email</i>
 
       <input type="text" class="validate" id="email" name="email" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[a-z]).*$"
@@ -10,7 +11,7 @@
 
       <label for="email">Email id </label>
     </div>
-    <div class="col s6" *ngIf="refname.invalid && (refname.touched|| refname.dirty)">
+    <div class="col s5 offset-s3" *ngIf="refname.invalid && (refname.touched|| refname.dirty)">
       <div *ngIf="refname.errors.required">
         Email id is required.
       </div>
@@ -21,14 +22,15 @@
   </div>
 
   <div class="row">
-    <div class="input-field col s3">
+      <div class="col s1 m4"></div>
+    <div class="input-field col s7 offset-s1 m4">
 
       <i class="small material-icons prefix">vpn_key</i>
       <input type="password" id="password" class="validate" name="password" type="password" required minlength="8" maxlength="12"
         [(ngModel)]="password" #refpw="ngModel">
       <label for="password">Password</label>
       </div>
-      <div class="col s6" *ngIf="refpw.invalid && (refpw.touched|| refpw.dirty)">
+      <div class="col s5 offset-s3" *ngIf="refpw.invalid && (refpw.touched|| refpw.dirty)">
         <div *ngIf="refpw.errors.required">
           Password is required.
         </div>

@@ -6,15 +6,16 @@
           Registration Form</p>
         
           <div class="row">
-            <div class="input-field col s6">
+          
+            <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
               <i class="small material-icons prefix ">account_circle</i>
-              <input type="text" id="fname"  class="validate"  name="fname" minlength="4" maxlength="10" required [(ngModel)]="fname" #refname="ngModel"
+              <input type="text" id="fname"  class="validate "  name="fname" minlength="4" maxlength="10" required [(ngModel)]="fname" #refname="ngModel"
                 (keydown)="test(refname);">
                 <label for="fname">First Name</label>
             </div>
     
             {{refname.className}}
-            <div class="col s6" *ngIf="refname.invalid && (refname.dirty || refname.touched)">
+            <div class="col s5 m3 l3 offset-s4" *ngIf="refname.invalid && (refname.dirty || refname.touched)">
               <div *ngIf="refname.errors.required">
                 First Name is required.
               </div>
@@ -22,18 +23,20 @@
                 First Name must be at least 4 characters long.
               </div>
             </div>
+       
           </div>
     
     
           <div class="row">
-            <div class="input-field col s6">
+            
+            <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
              <i class="small material-icons prefix">account_circle</i>
               <input type="text" class="validate" id="lname" name="lname" minlength="4" maxlength="20" required [(ngModel)]="lname" #reflname="ngModel"
                 (keydown)="test(refname);">
               <label for="lname">Last Name</label>
             </div>
     
-            <div class="col s6" *ngIf="reflname.invalid && (reflname.dirty || reflname.touched)">
+            <div class="col s5 m3 l3 offset-s4" *ngIf="reflname.invalid && (reflname.dirty || reflname.touched)">
               <div *ngIf="reflname.errors.required">
                 Last Name is required.
               </div>
@@ -41,17 +44,19 @@
                 Last Name must be at least 4 characters long.
               </div>
             </div>
+            
           </div>
     
           <div class="row">
-           <div class="input-field col s6">
+              
+           <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
               <i class="small material-icons prefix">email</i>
             
               <input type="text" class="validate" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" maxlength="20" required
                 [(ngModel)]="email" #refemail="ngModel">
                 <label for="email" >Email</label>
               </div>{{name}}
-            <div  class="col s6" *ngIf="refemail.invalid && (refemail.dirty || refemail.touched)">
+            <div  class="col s5 m3 l3 offset-s4" *ngIf="refemail.invalid && (refemail.dirty || refemail.touched)">
               <div *ngIf="refemail.errors.required">
                 Email is required.
               </div>
@@ -59,17 +64,19 @@
                 Email must be like someone@mail.com
               </div>
             </div>
+            
           </div>
     
           <div class="row">
-            <div class="input-field col s6">
+              
+            <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
             <i class="prefix small material-icons">vpn_key</i>
               <input type="password" class="validate" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[a-z]).*$"
               maxlength="20" required [(ngModel)]="password" #refpsw="ngModel" (keydown)="test(refpsw);"> 
               <label for="password">
                   Password</label>
               </div>{{name}}
-              <div  class="col s6" *ngIf="refpsw.invalid && (refpsw.dirty || refpsw.touched)">
+              <div  class="col s5 m3 l3 offset-s4" *ngIf="refpsw.invalid && (refpsw.dirty || refpsw.touched)">
               <div *ngIf="refpsw.errors.required">
                 Password is required.
               </div>
@@ -77,19 +84,21 @@
                 Password must be at least 8 characters long and, contains at least one number and one special charecter.
               </div>
             </div>
+            <div class="col s4"></div>
           </div>
     
     
           
     <div class="row">
-        <div class="input-field col s6">
+       
+        <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
             
               <i class="small material-icons prefix">vpn_key</i>
           
               <input type="password" class="validate" id="cnfpass" name="cnfpass" maxlength="20" required [(ngModel)]="cnfpass" #refcnfpass="ngModel">
               <label for="cnfpass">Confirm Password</label>
             </div>
-            <div  class="col s6" *ngIf="refcnfpass.invalid && (refcnfpass.dirty || refcnfpass.touched)">
+            <div  class="col s5 m3 l3 offset-s4" *ngIf="refcnfpass.invalid && (refcnfpass.dirty || refcnfpass.touched)">
               <div *ngIf="refcnfpass.errors.required">
                 Confirm your password
               </div>
@@ -101,13 +110,13 @@
     
     
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
     <i class="small material-icons prefix">web_asset</i>
             
               <input type="number" id="pan" class="validate" name="pan" maxlength=8 required [(ngModel)]="pan" #refpan="ngModel">
            <label for="pan">Pan number</label>
             </div>
-            <div class="col s6" *ngIf="refpan.invalid && (refpan.dirty || refpan.touched)">
+            <div class="col s5 m3 l3 offset-s4" *ngIf="refpan.invalid && (refpan.dirty || refpan.touched)">
               <div *ngIf="refpan.errors.required">
                 Pancard number is required.
               </div>
@@ -119,13 +128,13 @@
     
     
           <div class="row">
-    <div class="input-field col s6">
+    <div class="input-field col s8 m4 l4 offset-s2 offset-l4">
       <i class="small material-icons prefix">room</i>
             
               <input type="text" class="validate" id="address" name="address" maxlength="20" required [(ngModel)]="address" #refaddress="ngModel">
             <label for="address">Address</label>
             </div>
-            <div class="col s6" *ngIf="refaddress.invalid && (refaddress.dirty || refaddress.touched)">
+            <div class="col s5 m3 l3 offset-s4" *ngIf="refaddress.invalid && (refaddress.dirty || refaddress.touched)">
               <div *ngIf="refaddress.errors.required">
                 Address is required.
               </div>
@@ -133,7 +142,7 @@
           </div>
           <div class="center">
             <br>
-            <button type="button" class="btn teal" (click)="registerUser();">Register</button>
+            <button type="submit" class="btn teal" (click)="registerUser();">Register</button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="reset" class="btn teal">Reset</button>
           </div>
