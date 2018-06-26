@@ -1,0 +1,20 @@
+<h1>Atm component</h1>
+<div>
+  <div>
+  <label>Account number: </label>
+  <input type="number" id="Accno" name="Accno" required minlength="10" [(ngModel)]="Accno" #refAccno="ngModel">
+  </div>
+  <div *ngIf="refAccno.errors.minlength">
+    Enter valid account number
+  </div>
+  <div>
+    <label>Amount: </label>
+    <input type="number" id="Amount" name="Amount" required minlength="3" [(ngModel)]="Amount" #refAmount="ngModel">
+    </div>
+    <div *ngIf="refAmount.errors.minlength">
+      Amount should be atleast 100 rupees
+      </div>
+      <button type="submit">Withdraw</button><br>
+      <button type="submit">Deposit</button>
+    </div>
+  
