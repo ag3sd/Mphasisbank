@@ -1,0 +1,19 @@
+
+
+Table: customers
+
+firstName, lastName, email,password,pan,address,customerId,age
+
+Table: Accounts
+ accNo, customerId, balance, loan(boolean),fixed
+
+Table: Loan
+accNo,customerId,loanAmount,tenure,roi
+
+Table: transactions
+accNo,customerId,source,amount,balance
+
+Table:employee
+
+empId,empName,email,password,salary,designation
+ 
