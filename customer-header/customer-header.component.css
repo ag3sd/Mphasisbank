@@ -1,31 +1,24 @@
-
-    p{
-        font-size: 50px;
-        text-align: center;
-        color:black;
-        font-style: italic;
-        margin: 0px;
-        
-      }
-      .btn
-      {
-        box-shadow: none;
-      }
+p{
+    font-size: 50px;
+    text-align: center;
+    color:black;
+    font-style: italic;
+    margin: 0px;
+    
+  }
+  .btn
+  {
+    box-shadow: none;
+  }
+ 
      
-         
 .collection-item a:hover
 {
-    color:grey;
+color:grey;
 }
-      
-  #menu li
-  {
-      border:0px;
-    font-size: 20px;
-    
-  } 
-  .accept{
-     margin-top:15%;
-     z-index:100;
-     padding-top: 50%;
-  }
+  
+#menu li
+{
+  border:0px;
+font-size: 20px;
+}
